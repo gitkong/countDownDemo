@@ -73,6 +73,7 @@
     _timestamp = timestamp;
     if (_timestamp != 0) {
         timer =[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timer:) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     }
 }
 
