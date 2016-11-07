@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "CZCountDownView.h"
+#import "SecondViewController.h"
+#import "FLCountDownView.h"
 @interface ViewController ()
 @end
 
@@ -15,9 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"点击屏幕跳转";
     
     // 封装后
-    CZCountDownView *countDown      = [CZCountDownView cz_shareCountDown];
+    FLCountDownView *countDown      = [FLCountDownView fl_countDown];
     countDown.frame                 = CGRectMake(100, 100, 200, 30);
     countDown.timestamp             = 86400;
     countDown.backgroundImageName   = @"search_k";
@@ -26,9 +28,13 @@
     };
     [self.view addSubview:countDown];
     
-    CZCountDownView *c1             = [CZCountDownView cz_countDown];
-    CZCountDownView *c2             = [CZCountDownView cz_countDown];
+    FLCountDownView *c1             = [FLCountDownView fl_countDown];
+    FLCountDownView *c2             = [FLCountDownView fl_countDown];
     NSLog(@"%p--%p",c1,c2);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
 }
 
 @end

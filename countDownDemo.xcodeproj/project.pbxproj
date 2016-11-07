@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F1C2A681C17BA4B00A59DE8 /* CZCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C2A671C17BA4B00A59DE8 /* CZCountDownView.m */; settings = {ASSET_TAGS = (); }; };
+		110AC10E1DD052F000D0367A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110AC10D1DD052F000D0367A /* SecondViewController.m */; };
+		3F1C2A681C17BA4B00A59DE8 /* FLCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C2A671C17BA4B00A59DE8 /* FLCountDownView.m */; };
 		3F8037CB1C16BC92004EC448 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8037CA1C16BC92004EC448 /* main.m */; };
 		3F8037CE1C16BC92004EC448 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8037CD1C16BC92004EC448 /* AppDelegate.m */; };
 		3F8037D11C16BC92004EC448 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8037D01C16BC92004EC448 /* ViewController.m */; };
@@ -17,8 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F1C2A661C17BA4B00A59DE8 /* CZCountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZCountDownView.h; sourceTree = "<group>"; };
-		3F1C2A671C17BA4B00A59DE8 /* CZCountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCountDownView.m; sourceTree = "<group>"; };
+		110AC10C1DD052F000D0367A /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		110AC10D1DD052F000D0367A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3F1C2A661C17BA4B00A59DE8 /* FLCountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCountDownView.h; sourceTree = "<group>"; };
+		3F1C2A671C17BA4B00A59DE8 /* FLCountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCountDownView.m; sourceTree = "<group>"; };
 		3F8037C61C16BC92004EC448 /* countDownDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = countDownDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8037CA1C16BC92004EC448 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F8037CC1C16BC92004EC448 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,8 +48,8 @@
 		3F1C2A691C17D91D00A59DE8 /* countDownView */ = {
 			isa = PBXGroup;
 			children = (
-				3F1C2A661C17BA4B00A59DE8 /* CZCountDownView.h */,
-				3F1C2A671C17BA4B00A59DE8 /* CZCountDownView.m */,
+				3F1C2A661C17BA4B00A59DE8 /* FLCountDownView.h */,
+				3F1C2A671C17BA4B00A59DE8 /* FLCountDownView.m */,
 			);
 			name = countDownView;
 			sourceTree = "<group>";
@@ -75,6 +78,8 @@
 				3F8037CD1C16BC92004EC448 /* AppDelegate.m */,
 				3F8037CF1C16BC92004EC448 /* ViewController.h */,
 				3F8037D01C16BC92004EC448 /* ViewController.m */,
+				110AC10C1DD052F000D0367A /* SecondViewController.h */,
+				110AC10D1DD052F000D0367A /* SecondViewController.m */,
 				3F8037D21C16BC92004EC448 /* Main.storyboard */,
 				3F8037D51C16BC92004EC448 /* Assets.xcassets */,
 				3F8037D71C16BC92004EC448 /* LaunchScreen.storyboard */,
@@ -162,8 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110AC10E1DD052F000D0367A /* SecondViewController.m in Sources */,
 				3F8037D11C16BC92004EC448 /* ViewController.m in Sources */,
-				3F1C2A681C17BA4B00A59DE8 /* CZCountDownView.m in Sources */,
+				3F1C2A681C17BA4B00A59DE8 /* FLCountDownView.m in Sources */,
 				3F8037CE1C16BC92004EC448 /* AppDelegate.m in Sources */,
 				3F8037CB1C16BC92004EC448 /* main.m in Sources */,
 			);

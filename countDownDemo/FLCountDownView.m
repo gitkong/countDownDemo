@@ -6,12 +6,12 @@
 //  Copyright © 2015年 czebd. All rights reserved.
 //
 
-#import "CZCountDownView.h"
+#import "FLCountDownView.h"
 // label数量
 #define labelCount 4
 #define separateLabelCount 3
 #define padding 5
-@interface CZCountDownView (){
+@interface FLCountDownView (){
     // 定时器
     NSTimer *timer;
 }
@@ -27,18 +27,18 @@
 @property (nonatomic,strong)UILabel *secondsLabel;
 @end
 
-@implementation CZCountDownView
+@implementation FLCountDownView
 // 创建单例
-+ (instancetype)cz_shareCountDown{
++ (instancetype)fl_shareCountDown{
     static id instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[CZCountDownView alloc] init];
+        instance = [[FLCountDownView alloc] init];
     });
     return instance;
 }
 
-+ (instancetype)cz_countDown{
++ (instancetype)fl_countDown{
     return [[self alloc] init];
 }
 
@@ -72,8 +72,14 @@
 - (void)setTimestamp:(NSInteger)timestamp{
     _timestamp = timestamp;
     if (_timestamp != 0) {
-        timer =[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timer:) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        if (timer) {
+            [timer invalidate];
+            timer = nil;
+        }
+        else{
+            timer =[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timer:) userInfo:nil repeats:YES];
+            [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        }
     }
 }
 

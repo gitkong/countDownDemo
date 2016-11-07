@@ -10,7 +10,7 @@
 
 typedef void(^TimerStopBlock)();
 
-@interface CZCountDownView : UIView
+@interface FLCountDownView : UIView
 // 时间戳
 @property (nonatomic,assign)NSInteger timestamp;
 // 背景
@@ -20,11 +20,11 @@ typedef void(^TimerStopBlock)();
 /**
  *  创建单例对象
  */
-+ (instancetype)cz_shareCountDown;// 工程中使用的倒计时是唯一的
++ (instancetype)fl_shareCountDown;// 工程中使用的倒计时是唯一的
 
 /**
  *  创建非单例对象
  */
-+ (instancetype)cz_countDown; // 工程中倒计时不是唯一的
++ (instancetype)fl_countDown; // 工程中倒计时不是唯一的
 
 @end
